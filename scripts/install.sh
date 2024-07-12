@@ -31,10 +31,11 @@ mkdir -p Pictures/wallpapers
 mkdir -p Documents/Shared
 mkdir Videos
 cd hypr
-mv hypr/alacritty ~/.config/
-mv hypr/wofi ~/.config/
-mv hypr/wall.jpg Pictures/wallpapers
 mv hyprland.conf ~/.config/hypr/hyprland.conf
+mv alacritty/ ~/.config/
+mv wofi/ ~/.config/
+mv wall.jpg ~/Pictures/wallpapers
+
 rm scripts/install.sh
 cd
 sudo rm /usr/share/hyprland/*
