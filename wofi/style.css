@@ -1,0 +1,110 @@
+* {
+    transition: 0.2s;
+  }
+  
+  window {
+    font-family: "FreeSans", sans-serif;
+    font-size: 13px;
+  }
+  
+  window {
+    margin: 0px;
+    border: none;
+    background-color: transparent;
+    border-radius: 16px;
+  }
+  
+  #input {
+    padding: 4px;
+    margin: 20px;
+    padding-left: 20px;
+    border: none;
+    color: #fff;
+    font-weight: bold;
+    background: transparent;
+    outline: none;
+    border-radius: 16px;
+    font-family: "FreeSans", sans-serif;
+  }
+  
+  #input image {
+    color: #fff;
+  }
+  
+  #input:focus {
+    border: none;
+    outline: none;
+  }
+  
+  #input::placeholder {
+    color: #888;
+    font-family: "FreeSans", sans-serif;
+  }
+  
+  #inner-box {
+    margin: 20px;
+    margin-top: 0px;
+    border: none;
+    color: #cba6f7;
+    border-radius: 16px;
+    font-family: "FreeSans", sans-serif;
+  }
+  
+  #inner-box * {
+    transition: none;
+  }
+  
+  #outer-box {
+    margin: 0px;
+    border: none;
+    padding: 0px;
+    border-radius: 16px;
+    font-family: "FreeSans", sans-serif;
+  }
+  
+  #scroll {
+    margin-top: 5px;
+    border: none;
+    border-radius: 16px;
+    margin-bottom: 5px;
+  }
+  
+  #text:selected {
+    color: #fff;
+    font-weight: bold;
+    font-family: "FreeSans", sans-serif;
+  }
+  
+  #img {
+    margin-right: 20px;
+    background: transparent;
+  }
+  
+  #text {
+    margin: 0px;
+    border: none;
+    padding: 0px;
+    background: transparent;
+    font-family: "FreeSans", sans-serif;
+  }
+  
+  #entry {
+    margin: 0px;
+    border: none;
+    border-radius: 16px;
+    background-color: transparent;
+    min-height: 32px;
+    font-weight: bold;
+    font-family: "FreeSans", sans-serif;
+  }
+  
+  #entry:selected {
+    outline: none;
+    margin: 0px;
+    border: none;
+    border-radius: 16px;
+    background-color: #2e3440;
+    color: #eceff4;
+    font-family: "FreeSans", sans-serif;
+  }
+  
