@@ -8,7 +8,7 @@ cd ..
 rm -rf paru-bin
 
 echo "Installing packages"
-paru -S hyprland waybar wofi swww noto-fonts noto-fonts-emoji alacritty mpv pavucontrol playerctl otf-font-awesome polkit-gnome gnome-themes-extra papirus-icon-theme blueman
+paru -S hyprland waybar wofi swww noto-fonts noto-fonts-emoji alacritty mpv pavucontrol grim slurp playerctl otf-font-awesome polkit-gnome gnome-themes-extra papirus-icon-theme blueman hyprlock
 sudo systemctl enable bluetooth
 
 # Thunar
