@@ -8,7 +8,7 @@ cd ..
 rm -rf paru-bin
 
 echo "Installing packages"
-paru -S hyprland waybar wofi swww noto-fonts noto-fonts-emoji alacritty mpv pavucontrol grim slurp playerctl otf-font-awesome polkit-gnome gnome-themes-extra papirus-icon-theme blueman hyprlock
+paru -S hyprland waybar wofi swww hyprlock noto-fonts noto-fonts-emoji alacritty mpv pavucontrol grim slurp playerctl otf-font-awesome polkit-gnome gnome-themes-extra papirus-icon-theme blueman
 sudo systemctl enable bluetooth
 
 # Thunar
@@ -36,6 +36,7 @@ mv wofi/ ~/.config/
 mv wall.jpg ~/Pictures/wallpapers/
 cd
 mv hypr/hyprland.conf ~/.config/hypr/
+mv hypr/hyprlock.conf ~/.config/hypr/
 sudo mv hypr/waybar/config.jsonc /etc/xdg/waybar/
 sudo mv hypr/waybar/style.css /etc/xdg/waybar/
 sudo rm /usr/share/hyprland/*
