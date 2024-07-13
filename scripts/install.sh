@@ -4,6 +4,7 @@ sudo sed -i 's/^#ParallelDownloads/ParallelDownloads/' /etc/pacman.conf
 sudo sed -i 's/^#Color/Color/' /etc/pacman.conf
 sudo sed -i 's/^#VerbosePkgLists/VerbosePkgLists/' /etc/pacman.conf
 sudo sed -i "s/#MAKEFLAGS=\"-j2\"/MAKEFLAGS=\"-j$nc\"/g" /etc/makepkg.conf
+sed -i "s/COMPRESSXZ=(xz -c -z -)/COMPRESSXZ=(xz -c -T $nc -z -)/g" /etc/makepkg.conf
 
 echo "Installing AUR helper..."
 git clone https://aur.archlinux.org/paru-bin.git
@@ -40,7 +41,7 @@ mv alacritty/ ~/.config/
 mv wofi/ ~/.config/
 mv wall.jpg ~/Pictures/wallpapers/
 cd
-sudo rm /usr/share/hyprland/*
+#sudo rm /usr/share/hyprland/*
 mv ~/hypr/hyprland.conf ~/.config/hypr/
 mv ~/hypr/hyprlock.conf ~/.config/hypr/
 sudo mv ~/hypr/waybar/config.jsonc /etc/xdg/waybar/
