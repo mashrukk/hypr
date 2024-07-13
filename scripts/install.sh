@@ -41,3 +41,4 @@ mv alacritty/ ~/.config/
 mv wofi/ ~/.config/
 mv wall.jpg ~/Pictures/wallpapers/
 cd
+Hyprland
