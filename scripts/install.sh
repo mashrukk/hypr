@@ -20,7 +20,6 @@ sudo systemctl enable bluetooth
 # Thunar
 ./thunar.sh
 clear
-cd 
 
 # Apps
 paru -S --noconfirm obsidian signal-desktop syncthing keepassxc
@@ -33,3 +32,4 @@ clear
 paru -S --noconfirm nwg-look-bin
 
 fastfetch
+echo "Run the post installation script"
