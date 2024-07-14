@@ -32,13 +32,4 @@ paru -S --noconfirm vscodium-bin
 clear
 paru -S --noconfirm nwg-look-bin
 
-echo "Configuring Hyprland Desktop Environment..."
-mkdir -p Pictures/wallpapers
-mkdir -p Documents/Shared
-mkdir Videos
-cd hypr/
-mv alacritty/ ~/.config/
-mv wofi/ ~/.config/
-mv wall.jpg ~/Pictures/wallpapers/
-cd
-Hyprland
+fastfetch
