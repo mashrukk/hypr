@@ -30,6 +30,5 @@ clear
 paru -S --noconfirm vscodium-bin
 clear
 paru -S --noconfirm nwg-look-bin
-
-fastfetch
-echo "Run the post installation script"
+cd 
+Hyprland
