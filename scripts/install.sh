@@ -30,5 +30,6 @@ clear
 paru -S --noconfirm vscodium-bin
 clear
 paru -S --noconfirm nwg-look-bin
-cd 
+cd
+sudo rm /usr/share/hyprland/*
 Hyprland
