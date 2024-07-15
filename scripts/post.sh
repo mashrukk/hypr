@@ -6,12 +6,11 @@ mv ~/hypr/wofi ~/.config/
 mkdir -p ~/Pictures/wallpapers/
 mkdir -p ~/Documents/Shared/
 mv ~/hypr/wall.jpg ~/Pictures/wallpapers/
-sudo rm /usr/share/hyprland/*
 mv ~/hypr/hyprland.conf ~/.config/hypr/
 mv ~/hypr/hyprlock.conf ~/.config/hypr/
-sudo mv ~/hypr/waybar/config.json /etc/xdg/
+sudo mv ~/hypr/waybar/config.json /etc/xdg/waybar/
 sudo mv ~/hypr/waybar/style.css /etc/xdg/waybar/
 cd ~/hypr/scripts
-rm install.sh thunar.sh post.sh 
+rm install.sh thunar.sh post.sh
 clear
 Hyprland
