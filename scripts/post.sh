@@ -12,5 +12,6 @@ sudo mv ~/hypr/waybar/config.json /etc/xdg/waybar/
 sudo mv ~/hypr/waybar/style.css /etc/xdg/waybar/
 cd ~/hypr/scripts
 rm install.sh thunar.sh post.sh
+xdg-settings set default-web-browser librewolf.desktop
 clear
 Hyprland
