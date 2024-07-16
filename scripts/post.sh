@@ -14,4 +14,5 @@ cd ~/hypr/scripts
 rm install.sh thunar.sh post.sh
 xdg-settings set default-web-browser librewolf.desktop
 clear
+cd
 Hyprland
