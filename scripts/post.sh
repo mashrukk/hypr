@@ -4,6 +4,7 @@ cd
 mv ~/hypr/alacritty ~/.config/
 mv ~/hypr/wofi ~/.config/
 mkdir -p ~/Pictures/wallpapers/
+mkdir -p ~/Pictures/Screenshots/
 mkdir -p ~/Documents/Shared/
 mv ~/hypr/wall.jpg ~/Pictures/wallpapers/
 mv ~/hypr/hyprland.conf ~/.config/hypr/
