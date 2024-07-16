@@ -6,8 +6,7 @@ thunar=(
     thunar-volman 
     tumbler
     ffmpegthumbnailer
-    file-roller 
-    thunar-archive-plugin
+    file-roller
 )
 
 # Install Thunar and related packages
