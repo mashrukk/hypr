@@ -5,30 +5,42 @@ thunar_packages=(
     thunar-volman
     tumbler
     ffmpegthumbnailer
-    gvfs
-    gvfs-mtp
+    udisks2
 )
 
+# Check if a package is already installed
+check_package_installed() {
+    pacman -Q "$1" &>/dev/null
+}
+
+# Install packages if not already installed
 for package in "${thunar_packages[@]}"; do
-    sudo pacman -S --noconfirm "$package"
-    if [ $? -ne 0 ]; then
-        echo "Error: Failed to install $package."
-        exit 1
+    if ! check_package_installed "$package"; then
+        sudo pacman -S --noconfirm "$package"
+        if [ $? -ne 0 ]; then
+            echo "Error: Failed to install $package."
+            exit 1
+        fi
+    else
+        echo "$package is already installed."
     fi
 done
 
-# Check if gvfs is running
-if ! pgrep -x "gvfsd" >/dev/null; then
-    echo "gvfs is not running. Please ensure it is started for proper Thunar functionality."
+# Check if udisks2 service is running
+if ! systemctl is-active --quiet udisks2; then
+    echo "udisks2 service is not running. Starting udisks2..."
+    sudo systemctl start udisks2
 fi
 
-# Thunar volume management rules
+# Thunar volume management rules setup function
 setup_thunar_volman_rules() {
     local volman_config_path=~/.config/Thunar/uca.xml
+    local assets_dir="$(dirname "$0")/assets"  # Assuming assets folder is in the same directory as this script
+
     if [ ! -f "$volman_config_path" ]; then
-        echo "Setting up Thunar Volume Management rules..."
-        cp assets/uca.xml ~/.config/Thunar/
-        echo "Thunar Volume Management rules set up successfully."
+        mkdir -p ~/.config/Thunar  # Ensure Thunar config directory exists
+        cp "$assets_dir/uca.xml" "$volman_config_path"
+        sed -i 's|<mount>udisks2://|<mount>|g' "$volman_config_path"  # Use udisks2 for mounting
     else
         echo "Thunar Volume Management rules already exist, no need to set up."
     fi
@@ -37,3 +49,4 @@ setup_thunar_volman_rules() {
 setup_thunar_volman_rules
 
 echo "Thunar and essential related packages installed and configured successfully."
+
