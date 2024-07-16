@@ -1,22 +1,39 @@
 #!/bin/bash
 
-# Thunar and related packages
-thunar=(
-    thunar 
-    thunar-volman 
+thunar_packages=(
+    thunar
+    thunar-volman
     tumbler
     ffmpegthumbnailer
+    gvfs
+    gvfs-mtp
 )
 
-# Install Thunar and related packages
-for THUNAR in "${thunar[@]}"; do
-    sudo pacman -S --noconfirm "$THUNAR"
-done
-
-# Check and copy configuration files if they don't exist
-for DIR1 in gtk-3.0 Thunar xfce4; do
-    DIRPATH=~/.config/$DIR1
-    if [ ! -d "$DIRPATH" ]; then
-        cp -r assets/$DIR1 ~/.config/ && echo "Copied $DIR1 config files."
+for package in "${thunar_packages[@]}"; do
+    sudo pacman -S --noconfirm "$package"
+    if [ $? -ne 0 ]; then
+        echo "Error: Failed to install $package."
+        exit 1
     fi
 done
+
+# Check if gvfs is running
+if ! pgrep -x "gvfsd" >/dev/null; then
+    echo "gvfs is not running. Please ensure it is started for proper Thunar functionality."
+fi
+
+# Thunar volume management rules
+setup_thunar_volman_rules() {
+    local volman_config_path=~/.config/Thunar/uca.xml
+    if [ ! -f "$volman_config_path" ]; then
+        echo "Setting up Thunar Volume Management rules..."
+        cp assets/uca.xml ~/.config/Thunar/
+        echo "Thunar Volume Management rules set up successfully."
+    else
+        echo "Thunar Volume Management rules already exist, no need to set up."
+    fi
+}
+
+setup_thunar_volman_rules
+
+echo "Thunar and essential related packages installed and configured successfully."
