@@ -1,6 +1,5 @@
 #!/bin/bash
 
-cd
 mv ~/hypr/alacritty ~/.config/
 mv ~/hypr/wofi ~/.config/
 mkdir -p ~/Pictures/wallpapers/
