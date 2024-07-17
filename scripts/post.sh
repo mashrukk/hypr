@@ -10,8 +10,7 @@ mv ~/hypr/wofi ~/.config/
 mv ~/hypr/wall.jpg ~/Pictures/wallpapers/
 mv ~/hypr/hyprland.conf ~/.config/hypr/
 mv ~/hypr/hyprlock.conf ~/.config/hypr/
-sudo mv ~/hypr/waybar/config.jsonc /etc/xdg/waybar/
-sudo mv ~/hypr/waybar/style.css /etc/xdg/waybar/
+sudo mv ~/hypr/waybar/* /etc/xdg/waybar/
 cd ~/hypr/scripts
 rm install.sh thunar.sh post.sh
 xdg-settings set default-web-browser librewolf.desktop
