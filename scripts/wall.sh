@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Define the wallpaper directory
-WALLPAPER_DIR=~/Pictures/wallpapers
+WALLPAPER_DIR=~/Pictures/Wallpapers
 
 # Check if the wallpaper directory exists
 if [ ! -d "$WALLPAPER_DIR" ]; then
