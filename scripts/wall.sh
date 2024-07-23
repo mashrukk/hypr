@@ -10,7 +10,7 @@ if [ ! -d "$WALLPAPER_DIR" ]; then
 fi
 
 # List all image files in the wallpaper directory and extract the file names
-wallpapers=$(find "$WALLPAPER_DIR" -type f \( -iname "*.png" -o -iname "*.jpg" -o -iname "*.jpeg" \) | sed "s|$WALLPAPER_DIR/||" | sort)
+wallpapers=$(find "$WALLPAPER_DIR" -type f \( -iname "*.gif" -o -iname "*.png" -o -iname "*.jpg" -o -iname "*.jpeg" \) | sed "s|$WALLPAPER_DIR/||" | sort)
 
 # Check if there are any wallpapers
 if [ -z "$wallpapers" ]; then
