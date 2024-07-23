@@ -1,6 +1,6 @@
 #!/bin/bash
 
-mkdir -p ~/Pictures/wallpapers/
+mkdir -p ~/Pictures/Wallpapers/
 mkdir -p ~/Pictures/Screenshots/
 mkdir -p ~/Documents/Shared/
 mkdir -p ~/.local/share/icons/
