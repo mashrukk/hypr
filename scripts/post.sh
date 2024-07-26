@@ -7,7 +7,7 @@ mkdir -p ~/.local/share/icons/
 mv ~/hypr/cursor ~/.local/share/icons/
 mv ~/hypr/alacritty ~/.config/
 mv ~/hypr/wofi ~/.config/
-mv ~/hypr/wall.jpg ~/Pictures/wallpapers/
+mv ~/hypr/wall.jpg ~/Pictures/Wallpapers/
 mv ~/hypr/hyprland.conf ~/.config/hypr/
 mv ~/hypr/hyprlock.conf ~/.config/hypr/
 sudo mv ~/hypr/waybar/* /etc/xdg/waybar/
