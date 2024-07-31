@@ -29,7 +29,7 @@ paru -S --noconfirm qview-git
 clear
 paru -S --noconfirm vscodium-bin
 clear
-paru -S --noconfirm nwg-look-bin
+paru -S --noconfirm nwg-look
 cd
 sudo rm /usr/share/hyprland/*
 Hyprland
