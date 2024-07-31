@@ -2,6 +2,8 @@
 
 mkdir -p ~/Pictures/Wallpapers/
 mkdir -p ~/Pictures/Screenshots/
+mkdir ~/Downloads
+mkdir ~/Videos
 mkdir -p ~/Documents/Shared/
 mkdir -p ~/.local/share/icons/
 mv ~/hypr/cursor ~/.local/share/icons/
