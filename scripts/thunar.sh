@@ -49,7 +49,7 @@ mkdir -p /media/drive
 echo "Available drives:"
 lsblk -o NAME,SIZE,TYPE,MOUNTPOINT,UUID
 
-read -p "Enter the drive name (e.g., sdb): " drive_name
+read -p "Enter the drive name to mount (e.g., sdb): " drive_name
 
 uuid=$(lsblk -no UUID /dev/"$drive_name")
 
