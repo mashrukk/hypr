@@ -23,7 +23,7 @@ clear
 
 # Apps
 paru -S --noconfirm obsidian signal-desktop syncthing keepassxc
-paru -S --noconfirm brave-bin
+paru -S --noconfirm librewolf-bin
 clear
 paru -S --noconfirm qview-git
 clear
