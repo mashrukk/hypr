@@ -10,11 +10,8 @@ select_region() {
     slurp_region=$(slurp)
     if [ -n "$slurp_region" ]; then
         grim -g "$slurp_region" "$FILENAME"
-        echo "Screenshot taken"
-    else
-        echo "Nothing selected"
+        grim -g "$slurp_region" - | wl-copy
     fi
 }
 
 select_region
-
